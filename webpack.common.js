@@ -1,12 +1,14 @@
 const path = require('path');
+const commonPath = require('./common-path');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const NSScript = {
-  name: 'UpfrontFood',
+  name: 'ShopiyThemeStarter',
   entry: './src/index.ts',
   output: {
+    path: commonPath.outputPath,
     filename: 'assets/kmacoders-script.js',
   },
   module: {
