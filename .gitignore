@@ -1,0 +1,10 @@
+node_modules
+thumb.db
+*.zip
+*.rar
+.DS_Store
+npm-debug.log
+debug.log
+.env
+theme/config.yml
+.vscode
