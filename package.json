@@ -11,6 +11,11 @@
     "type": "git",
     "url": "git+ssh://git@gitlab.com/xopify1/base-theme.git"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
