@@ -10,9 +10,16 @@
     "allowJs": true,
     "module": "commonjs",
     "target": "es5",
-    "sourceMap": false
+    "sourceMap": false,
+    "moduleResolution": "node",
+    "strict": true,
+    "experimentalDecorators": true
   },
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.vue",
+  ],
 }

@@ -1,58 +1,83 @@
-## Chuyển từ theme test sang theme chính
+## Note:
+### Commit code
+#### Commitlint Config Conventional
 
-### 1. Snipets
-- Trong folder `snipets` tạo ra file `product-w-h.liquid` để thêm phần chỉnh sửa width, height cho product.
-```
-<!-- Remove default value
-Set empty text in fisrt init -->
-<div  class="product__create__print">
-	<label  for="width">Width (cm)</label>
-	<input  id="productWidth"  type="text"  name="properties[Width(cm)]"/>
-	
-	<label  for="height">Height (cm)</label>
-	<input  id="productHeight"  type="text"  name="properties[Height(cm)]"/>
-</div>
-```
-
-### 2. Sections
-
-- Trong file `product-template.liquid` ( trong folder `section` ) , include file vừa tạo bên trên vào nếu `product.type = "Creative Prints"`, thêm ngay trước phần code show giá product.
-```
-...
-
-{% if  product.type == "Creative Prints" %}
-	{% render  'product-w-h' %}
-{% endif %}
-
-<div  class="product-single__meta">
-	<div  class="h4 product-price">
-	...
-...
-``` 
-
-- Thêm đoạn này vào đầu wrapper của product template, trigger run Javascript
+-   `build` : Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm).
+-   `ci` : Changes to our CI configuration files and scripts (example scopes: Gitlab CI, Circle, BrowserStack, SauceLabs).
+-   `chore` : add something without touching production code (Eg: update npm dependencies)
+-   `docs` : Documentation only changes
+-   `feat` : A new feature
+-   `fix` : A bug fix
+-   `perf` : A code change that improves performance
+-   `refactor` : A code change that neither fixes a bug nor adds a feature
+-   `revert` : Reverts a previous commit
+-   `style` : Changes that do not affect the meaning of the code (Eg: adding white-space, formatting, missing semi-colons, etc)
+-   `test` : Adding missing tests or correcting existing tests
 
 ```
+git commit -m "fix textfield" # fails
+git commit -m "fix: fix textfield" # passes
+```
+### SCSS
 
-{% if product.type == "Creative Prints" %}
-  {% assign typeClassName = 'creative-container' %}
-{% endif %}
-{% if product.type == "Decorative Walls" %}
-  {% assign typeClassName = 'decorative-container' %}
-{% endif %}
+ - File main chỉ để import
+ - Trong các folder nhỏ, import scss vào `*-dir.scss` folder, rồi chỉ import file `*-dir.scss` ra ngoài `main`
 
-<div class="wrapper xo-wrapper-product {{ typeClassName }}"
-  {% if product.type == "Creative Prints" %} data-product-type='Creative Prints'{% endif %}
-  {% if product.type == "Decorative Walls" %} data-product-type='Decorative Walls'{% endif %}
->
-
+`_utils.scss`
+```
+@import 'variables.scss' # Sass Variables
+@import 'functions.scss' # Sass Functions
+@import 'mixins.scss' # Sass Mixins
+@import 'helpers.scss' # Class & placeholders helpers
 ```
 
-à thôi, cóp cả file  `product-template.liquid` chuyển sang cho nhanh vì bên trong còn chỉnh sửa bao nhiêu.
+`main.scss`
+```
+/*
+* Utils
+*/
+@import  './utils/utils-dir';
+```
 
-### 3. Assets
-- Chuyển file `chroma-app.js` sang `Assets`.
+### TS
 
-### 4. Layout
+ - Code TS viết vào từng folder riêng, tạo file trong folder tương ứng.
+ - Code Home, Product... để vào folder `./pages`
+ - Code SectionA, SectionB... để vào folder `./sections`
+ - ..vv..vv
 
-- Copy toàn bộ `theme.liquid` thay thế cho `theme.liquid` trong folder `layout`.
+### Install
+#### Extension
+
+ - EditorConfig for VSCode
+ - ESLint
+ - Theme Check
+ - ....
+ 
+ #### Shopify
+ - Themekit 
+ - ...
+
+#### Other
+- Bao giờ nhớ ra thì bổ sung, hi.
+
+---
+
+## Developing
+```
+npm i
+```
+```
+npm run dev
+```
+```
+cd ./dist
+theme watch
+```
+
+## Other
+### Commit Lint
+### SASSLint
+### Alias 
+Bao giờ nghĩ ra thì ghi tiếp
+

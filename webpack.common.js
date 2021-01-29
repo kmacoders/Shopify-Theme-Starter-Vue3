@@ -3,16 +3,27 @@ const commonPath = require('./common-path');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const NSScript = {
   name: 'ShopiyThemeStarter',
   entry: './src/index.ts',
   output: {
     path: commonPath.outputPath,
-    filename: 'assets/kmacoders-script.js',
+    filename: 'assets/app.js',
   },
   module: {
     rules: [
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            'scss': 'vue-style-loader!css-loader!sass-loader',
+            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
+          },
+        },
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -24,6 +35,9 @@ const NSScript = {
         test: /\.ts?$/,
         loader: 'ts-loader',
         exclude: /node_modules/,
+        options: {
+          appendTsSuffixTo: [/\.vue$/],
+        },
       },
       {
         test:/\.(s*)css$/,
@@ -62,11 +76,13 @@ const NSScript = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'assets/kmacoders-style.css',
+      filename: 'assets/main.css',
     }),
+    new VueLoaderPlugin()
   ],
   resolve: {
-    extensions: ['.ts', '.js', '.json'],
+    extensions: ['.vue','.ts', '.js', '.json'],
+    alias: { vue: 'vue/dist/vue.esm.js' }
   },
 };
 

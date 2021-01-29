@@ -1,5 +1,41 @@
-@import './vendors/grid';
+/* All import */
+/*
+ * Vendor
+ */
+@import './vendors/grid'; // Grid BS4
+@import './vendors/normalize'; // Reset CSS
 
-* {
-  color: red;
-}
+/*
+ * Utils
+ */
+@import './utils/utils-dir';
+
+/*
+ * Themes
+ */
+@import './themes/themes-dir';
+
+/*
+ * Pages
+ */
+@import './pages/pages-dir';
+
+/*
+ * Layout
+ */
+@import './layout/layout-dir';
+
+/*
+ * Components
+ */
+@import './components/components-dir';
+
+/*
+ * Base
+ */
+@import './base/base-dir';
+
+/*
+ * Code chung
+ */
+@import './general';
