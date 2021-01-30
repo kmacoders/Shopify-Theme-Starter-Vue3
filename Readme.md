@@ -19,7 +19,7 @@ git commit -m "fix textfield" # fails
 git commit -m "fix: fix textfield" # passes
 ```
 ### SCSS
-
+#### Import
  - File main chỉ để import
  - Trong các folder nhỏ, import scss vào `*-dir.scss` folder, rồi chỉ import file `*-dir.scss` ra ngoài `main`
 
@@ -38,6 +38,21 @@ git commit -m "fix: fix textfield" # passes
 */
 @import  './utils/utils-dir';
 ```
+
+#### Bootstrap 4 Grid
+Grid của BS4 đã được thêm sẵn trong `./style/vendors`, chỉ cần lấy ra dùng, thêm prefix `xo-` trước class là được.
+
+```
+<div class="xo-container">
+  <div class="xo-row">
+    ...
+  </div>
+</div>
+```
+
+#### Reset CSS
+Reset CSS cho thống nhất default style element trên các Browsers đã được thêm sẵn trong
+file `./style/vendors/normalize` rồi nên không cần viết thêm những cái có sẵn nưa.
 
 ### TS
 

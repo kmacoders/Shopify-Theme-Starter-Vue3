@@ -6,5 +6,5 @@ thumb.db
 npm-debug.log
 debug.log
 .env
-theme/config.yml
+dist/config.yml
 .vscode

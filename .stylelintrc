@@ -1,0 +1,16 @@
+{
+  "ignoreFiles": [
+    "src/styles/vendors/*.scss"
+  ],
+  "rules": {
+    "max-nesting-depth": 2,
+    "max-empty-lines": 2,
+    "color-hex-case": "lower",
+    "comment-empty-line-before": ["always", {
+      "except": ["first-nested"],
+      "ignore": ["after-comment", "stylelint-commands"]
+    }]
+  }
+}
+
+

@@ -1,0 +1,16 @@
+
+/*
+* Set size for a element
+*
+* @param $width: width property
+* @param $height: height property
+*
+* @example
+* .foo {
+*    @include box(10px, 5px);
+* }
+*/
+@mixin box($width, $height) {
+  height: $height;
+  width: $width;
+}

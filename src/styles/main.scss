@@ -1,9 +1,12 @@
 /* All import */
+
 /*
  * Vendor
  */
+@import './vendors/variants'; // File chứa variable cho file grid bên dứoi
 @import './vendors/grid'; // Grid BS4
 @import './vendors/normalize'; // Reset CSS
+@import './vendors/swiper-bundle';
 
 /*
  * Utils

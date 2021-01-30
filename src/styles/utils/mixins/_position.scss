@@ -1,0 +1,33 @@
+/*
+* Add position property
+*
+* @param {String} $position - relative | absolute | fixed
+* @param {Length} $args - List direction property and value
+*
+* @example
+* - Usage:
+* .foo {
+*    @include position(relative, top 0 left 1em);
+* }
+* - Output:
+* .foo {
+     position: relative;
+     top: 0;
+     left: 1em;
+* }
+* ...or other way :
+* .foo {
+*    @include position(relative, '');
+* }
+*/
+@mixin position($position, $args) {
+  @each $o in top right bottom left {
+      $i: index($args, $o);
+
+      @if $i and $i + 1<= length($args) and type-of(nth($args, $i + 1)) == number {
+          #{$o}: nth($args, $i + 1);
+      }
+  }
+
+  position: $position;
+}

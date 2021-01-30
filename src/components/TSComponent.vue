@@ -20,6 +20,6 @@ const test = new TSComponent({
 
 <style>
   .product-template__container {
-    border: 1px solid red;
+    border: 1px solid rgb(136, 230, 49);
   }
 </style>

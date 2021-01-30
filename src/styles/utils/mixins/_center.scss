@@ -1,0 +1,21 @@
+/* Self center vertical */
+@mixin vertical-align-center {
+  position: relative;
+  top: 50%;
+  @include prefix(transform, translateY(-50%));
+}
+
+/* Self center horizontal */
+@mixin horizontal-align-center {
+  position: relative;
+  left: 50%;
+  @include prefix(transform, translateX(-50%));
+}
+
+/* Self center both direction */
+@mixin both-align-center {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  @include prefix(transform, translate(-50%, -50%));
+}

@@ -3,7 +3,8 @@ const commonPath = require('./common-path');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const NSScript = {
   name: 'ShopiyThemeStarter',
@@ -14,16 +15,6 @@ const NSScript = {
   },
   module: {
     rules: [
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          loaders: {
-            'scss': 'vue-style-loader!css-loader!sass-loader',
-            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
-          },
-        },
-      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -37,6 +28,16 @@ const NSScript = {
         exclude: /node_modules/,
         options: {
           appendTsSuffixTo: [/\.vue$/],
+        },
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            'scss': 'vue-style-loader!css-loader!sass-loader',
+            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
+          },
         },
       },
       {
@@ -78,12 +79,24 @@ const NSScript = {
     new MiniCssExtractPlugin({
       filename: 'assets/main.css',
     }),
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new StyleLintPlugin({
+      configFile: '.stylelintrc',
+      context: 'src',
+      files: '**/*.(s(c|a)ss|css)',
+      failOnError: false,
+      quiet: false,
+      emitErrors: true
+    })
   ],
   resolve: {
     extensions: ['.vue','.ts', '.js', '.json'],
     alias: { vue: 'vue/dist/vue.esm.js' }
   },
+  stats: {
+    entrypoints: false,
+    children: false
+  }
 };
 
 module.exports = { NSScript }
