@@ -1,0 +1,21 @@
+/*
+* Set size for a element
+*
+* @param $width: width property
+* @param $line: line property
+*
+* @example
+* .foo {
+*    @include three-dots(200px, 3);
+* }
+*/
+
+@mixin three-dots($width, $line) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+
+  width: $width;
+}

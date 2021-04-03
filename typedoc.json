@@ -1,0 +1,4 @@
+{
+  "entryPoints": ["src/helpers/", "src/types"],
+  "out": "docs"
+}

@@ -1,0 +1,29 @@
+.register-wrapper {
+  display: block;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @include responsive(SM) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/*
+* Register form
+*/
+.register-form {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  @include responsive(MD) {
+    padding: 0;
+  }
+
+  .register__btn {
+    margin-top: 15px;
+  }
+}

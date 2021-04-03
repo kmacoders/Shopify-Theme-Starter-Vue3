@@ -1,6 +1,7 @@
 {
   "ignoreFiles": [
-    "src/styles/vendors/*.scss"
+    "src/styles/vendors/*.scss",
+    "src/theme/**/*.(s(c|a)ss|css)",
   ],
   "rules": {
     "max-nesting-depth": 2,

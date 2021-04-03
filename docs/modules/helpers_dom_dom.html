@@ -1,0 +1,545 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>helpers/dom/dom | xo-boutique</title>
+	<meta name="description" content="Documentation for xo-boutique">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">xo-boutique</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">xo-boutique</a>
+				</li>
+				<li>
+					<a href="helpers_dom_dom.html">helpers/dom/dom</a>
+				</li>
+			</ul>
+			<h1>Module helpers/dom/dom</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="helpers_dom_dom.html#addclass" class="tsd-kind-icon">add<wbr>Class</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="helpers_dom_dom.html#byclassname" class="tsd-kind-icon">by<wbr>Class<wbr>Name</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="helpers_dom_dom.html#byid" class="tsd-kind-icon">by<wbr>Id</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="helpers_dom_dom.html#hasclass" class="tsd-kind-icon">has<wbr>Class</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="helpers_dom_dom.html#qs" class="tsd-kind-icon">qs</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="helpers_dom_dom.html#qsa" class="tsd-kind-icon">qsa</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="helpers_dom_dom.html#removeclass" class="tsd-kind-icon">remove<wbr>Class</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="helpers_dom_dom.html#toggleclass" class="tsd-kind-icon">toggle<wbr>Class</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="addclass" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> add<wbr>Class</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Class<span class="tsd-signature-symbol">(</span>el<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, className<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in helpers/dom/dom.ts:111</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Add class to element if that class is not exist</p>
+								</div>
+								<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+									<h4>Example</h4>
+								</a>
+								<pre><code><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">addClass</span><span style="color: #000000">, </span><span style="color: #001080">byId</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;tsumami&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">content</span><span style="color: #000000"> = </span><span style="color: #795E26">byId</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;content&#039;</span><span style="color: #000000">);</span>
+
+<span style="color: #795E26">addClass</span><span style="color: #000000">(</span><span style="color: #001080">content</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;new-class&#039;</span><span style="color: #000000">);</span>
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>el: <span class="tsd-signature-type">HTMLElement</span></h5>
+								</li>
+								<li>
+									<h5>className: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="byclassname" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> by<wbr>Class<wbr>Name</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">by<wbr>Class<wbr>Name<span class="tsd-signature-symbol">(</span>className<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, ctx<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLCollection</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in helpers/dom/dom.ts:31</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns an array of all child elements which have all of the given class names</p>
+								</div>
+								<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+									<h4>Example:</h4>
+								</a>
+								<pre><code><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">byClassName</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;helpers/dom&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">listItems</span><span style="color: #000000"> = </span><span style="color: #795E26">byClassName</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;list__items&#039;</span><span style="color: #000000">);</span>
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>className: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>ctx: <span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol"> = ...</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">HTMLCollection</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="byid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> by<wbr>Id</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">by<wbr>Id<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLElement</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in helpers/dom/dom.ts:16</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a reference to an element by its ID.</p>
+								</div>
+								<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+									<h4>Example:</h4>
+								</a>
+								<pre><code><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">byId</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;helpers/dom&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">content</span><span style="color: #000000"> = </span><span style="color: #795E26">byId</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;main-content&#039;</span><span style="color: #000000">);</span>
+</code></pre>
+								<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById</a></p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLElement</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="hasclass" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> has<wbr>Class</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">has<wbr>Class<span class="tsd-signature-symbol">(</span>el<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, className<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in helpers/dom/dom.ts:90</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Check class is exist on target element</p>
+								</div>
+								<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+									<h4>Example</h4>
+								</a>
+								<pre><code><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">hasClass</span><span style="color: #000000">, </span><span style="color: #001080">byId</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;tsumami&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">content</span><span style="color: #000000"> = </span><span style="color: #795E26">byId</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;content&#039;</span><span style="color: #000000">);</span>
+
+<span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #795E26">hasClass</span><span style="color: #000000">(</span><span style="color: #001080">content</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;remove-me&#039;</span><span style="color: #000000">)) {</span>
+<span style="color: #000000">    </span><span style="color: #008000">//...</span>
+<span style="color: #000000">}</span>
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>el: <span class="tsd-signature-type">HTMLElement</span></h5>
+								</li>
+								<li>
+									<h5>className: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="qs" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> qs</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">qs&lt;T&gt;<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, ctx<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in helpers/dom/dom.ts:47</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the first element within the document that matches the specified group of selectors</p>
+								</div>
+								<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+									<h4>Example:</h4>
+								</a>
+								<pre><code><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">qs</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;helpers/dom&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">content</span><span style="color: #000000"> = </span><span style="color: #795E26">qs</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;#main-content&#039;</span><span style="color: #000000">);</span>
+</code></pre>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector</a></p>
+									</dd>
+									<dt>see</dt>
+									<dd><p><a href="https://stackoverflow.com/questions/43032004/queryselector-in-typescript">https://stackoverflow.com/questions/43032004/queryselector-in-typescript</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>ctx: <span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> = ...</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="qsa" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> qsa</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">qsa&lt;T&gt;<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, ctx<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NodeListOf</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in helpers/dom/dom.ts:62</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a list of the elements within the document that match the specified group of selectors</p>
+								</div>
+								<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+									<h4>Example:</h4>
+								</a>
+								<pre><code><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">qsa</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;tsumami&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">listItems</span><span style="color: #000000"> = </span><span style="color: #795E26">qsa</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;.list .list-items&#039;</span><span style="color: #000000">);</span>
+</code></pre>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll">https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>ctx: <span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> = ...</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">NodeListOf</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="removeclass" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> remove<wbr>Class</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Class<span class="tsd-signature-symbol">(</span>el<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, className<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in helpers/dom/dom.ts:132</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Remove class from element</p>
+								</div>
+								<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+									<h4>Example</h4>
+								</a>
+								<pre><code><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">removeClass</span><span style="color: #000000">, </span><span style="color: #001080">byId</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;tsumami&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">content</span><span style="color: #000000"> = </span><span style="color: #795E26">byId</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;content&#039;</span><span style="color: #000000">);</span>
+
+<span style="color: #795E26">removeClass</span><span style="color: #000000">(</span><span style="color: #001080">content</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;remove-me&#039;</span><span style="color: #000000">);</span>
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>el: <span class="tsd-signature-type">HTMLElement</span></h5>
+								</li>
+								<li>
+									<h5>className: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="toggleclass" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> toggle<wbr>Class</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">toggle<wbr>Class<span class="tsd-signature-symbol">(</span>el<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, className<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in helpers/dom/dom.ts:165</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Toggle class</p>
+								</div>
+								<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+									<h4>Example</h4>
+								</a>
+								<pre><code><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">toggleClass</span><span style="color: #000000">, </span><span style="color: #001080">byId</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;tsumami&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #008000">// html: &lt;div id=&quot;content&quot;&gt;&lt;/div&gt;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">content</span><span style="color: #000000"> = </span><span style="color: #795E26">byId</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;content&#039;</span><span style="color: #000000">);</span>
+
+<span style="color: #795E26">toggleClass</span><span style="color: #000000">(</span><span style="color: #001080">content</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;random-class&#039;</span><span style="color: #000000">)</span>
+<span style="color: #008000">// html: &lt;div id=&quot;content&quot; class=&quot;random-class&quot;&gt;&lt;/div&gt;</span>
+
+<span style="color: #795E26">toggleClass</span><span style="color: #000000">(</span><span style="color: #001080">content</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;random-class&#039;</span><span style="color: #000000">)</span>
+<span style="color: #008000">// html: &lt;div id=&quot;content&quot;&gt;&lt;/div&gt;</span>
+
+<span style="color: #795E26">toggleClass</span><span style="color: #000000">(</span><span style="color: #001080">content</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;random-class&#039;</span><span style="color: #000000">)</span>
+<span style="color: #008000">// html: &lt;div id=&quot;content&quot; class=&quot;random-class&quot;&gt;&lt;/div&gt;</span>
+
+<span style="color: #795E26">toggleClass</span><span style="color: #000000">(</span><span style="color: #001080">content</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;random-class&#039;</span><span style="color: #000000">, </span><span style="color: #0000FF">true</span><span style="color: #000000">)</span>
+<span style="color: #008000">// html: &lt;div id=&quot;content&quot; class=&quot;random-class&quot;&gt;&lt;/div&gt;</span>
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>el: <span class="tsd-signature-type">HTMLElement</span></h5>
+								</li>
+								<li>
+									<h5>className: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Modules</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="helpers.html">helpers</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="helpers_cart_cart.html">helpers/cart/cart</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="helpers_dom_common.html">helpers/dom/common</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="helpers_dom_dom.html">helpers/dom/dom</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="helpers_dom_event.html">helpers/dom/event</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="helpers_lazyload.html">helpers/lazyload</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="helpers_sections.html">helpers/sections</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="helpers_swiper.html">helpers/swiper</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="helpers_utils.html">helpers/utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="helpers_vueconfig.html">helpers/vue<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="types_classname_swiper_type.html">types/classname/swiper.type</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="types_shopify_cart_type.html">types/shopify/cart.type</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="types_shopify_common_type.html">types/shopify/common.type</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="types_shopify_product_type.html">types/shopify/product.type</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="types_shopify_theme_type.html">types/shopify/theme.type</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="helpers_dom_dom.html#addclass" class="tsd-kind-icon">add<wbr>Class</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="helpers_dom_dom.html#byclassname" class="tsd-kind-icon">by<wbr>Class<wbr>Name</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="helpers_dom_dom.html#byid" class="tsd-kind-icon">by<wbr>Id</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="helpers_dom_dom.html#hasclass" class="tsd-kind-icon">has<wbr>Class</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="helpers_dom_dom.html#qs" class="tsd-kind-icon">qs</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="helpers_dom_dom.html#qsa" class="tsd-kind-icon">qsa</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="helpers_dom_dom.html#removeclass" class="tsd-kind-icon">remove<wbr>Class</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="helpers_dom_dom.html#toggleclass" class="tsd-kind-icon">toggle<wbr>Class</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

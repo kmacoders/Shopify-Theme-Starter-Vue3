@@ -3,20 +3,16 @@
 /*
  * Vendor
  */
+// @import '~swiper/swiper.scss';
+@import './vendors/reset';
 @import './vendors/variants'; // File chứa variable cho file grid bên dứoi
 @import './vendors/grid'; // Grid BS4
 @import './vendors/normalize'; // Reset CSS
-@import './vendors/swiper-bundle';
 
 /*
  * Utils
  */
 @import './utils/utils-dir';
-
-/*
- * Themes
- */
-@import './themes/themes-dir';
 
 /*
  * Pages
@@ -34,11 +30,34 @@
 @import './components/components-dir';
 
 /*
+ * Sections
+ */
+ @import './sections/sections-dir';
+
+/*
+ * Snippet
+ */
+ @import './snippet/snippet-dir';
+
+/*
  * Base
  */
 @import './base/base-dir';
 
 /*
+ * Helpers
+ */
+@import './helpers/helpers-dir';
+
+/* Auto impo@import all scss file from Theme folder  */
+/* Using @see https://www.npmjs.com/package/impo@import-glob-loader */
+@import "../theme/**/*.scss";
+
+/*
  * Code chung
  */
 @import './general';
+
+* {
+  color: red;
+}

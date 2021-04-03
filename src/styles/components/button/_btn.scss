@@ -1,0 +1,173 @@
+.xo-btn {
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  color: color(btn-primary-text);
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: color(btn-primary-darker);
+
+  padding: 14px 28px;
+
+  text-align: center;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+
+  z-index: 1;
+
+  &::before {
+    content: "";
+    display: block;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    background: color(btn-primary-darker);
+
+    transform: scale(1, 1);
+    transform-origin: left center;
+    transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+    z-index: -1;
+  }
+  &:hover{
+    color: color(btn-primary-darker);
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: color(btn-primary-darker);
+
+    &::before {
+      transform-origin: right center;
+      transform: scale(0, 1);
+    }
+  }
+}
+
+/**
+* ------- xo-btn--is-small --------
+*/
+.xo-btn--is-small {
+  padding: 12px 24px;
+}
+
+.xo-btn--is-medium {
+  padding: 16px 32px;
+}
+
+.xo-btn--is-large {
+  padding: 18px 36px;
+}
+
+/**
+* ------- xo-btn--is-rounded --------
+*/
+.xo-btn--is-rounded {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/**
+* ------- xo-btn--is-loading --------
+*/
+.xo-btn--is-loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none !important;
+
+  &::after {
+    content: '';
+
+    width: 1em;
+    height: 1em;
+
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 8px);
+
+    border-radius: 50%;
+    border: 2px solid #000;
+    border-right-color: transparent;
+    border-top-color: transparent;
+
+    animation: rotateAround .5s infinite linear;
+  }
+
+  /* Remove exist content button */
+  &::before {
+    background: transparent !important;
+  }
+}
+
+/**
+* ------- xo-btn--is-fullwidth --------
+*/
+.xo-btn--is-fullwidth {
+  width: 100%;
+}
+
+.xo-btn--is-soldout {
+  pointer-events: none !important;
+  color: #fff;
+  border-color: #bbb;
+
+  &::before {
+    background-color: #bbb;
+    transform: none;
+    transition: none;
+  }
+}
+
+/**-----------------------------
+* ------------ KEYFRAMES--------
+*-------------------------------
+*/
+@keyframes rotateAround {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(359deg);
+    opacity: .75;
+  }
+}
+
+/**
+* ------- xo-btn--link --------
+*/
+.xo-btn--link {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+
+  line-height: 27.2px;
+  font-size: 16px;
+  font-weight: 500;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+
+    background-color: #000;
+
+    width: 100%;
+    height: 1px;
+
+    transform: scale(1, 1);
+    transform-origin: left center;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:hover::before {
+    transform: scale(0, 1);
+  }
+}

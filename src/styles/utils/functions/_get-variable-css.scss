@@ -1,0 +1,43 @@
+/// Get color variable from css to scss
+/// @param $color-props: color variable : --color-text-rgb, --color-body-text
+///
+@function color($color-props) {
+  @return var(--color-#{$color-props});
+}
+
+/// Get font variable from css to scss
+/// @param $font-props: font variable : --font-size-header, --font-size-base
+///
+@function font($font-props) {
+  @return var(--font-#{$font-props});
+}
+
+/// Get all general variable from css to scss
+@function v($props) {
+  @return var(--#{$props});
+}
+
+/// Example :
+// :root {
+//   --color-background: #FFFFFF;
+// }
+
+// body {
+//   color: color(primary);
+// }
+
+// compiled sass code is:
+
+// body {
+//   color: var(--color-primary);
+// }
+
+// .kmacoders {
+//   color: v(--color-background);
+// }
+
+//  compiled sass code is:
+
+// .kmacoders {
+// 	color: var(----color-background);
+// }

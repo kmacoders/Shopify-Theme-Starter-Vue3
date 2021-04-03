@@ -1,0 +1,69 @@
+.testimonial-about1,
+.testimonial-about3 {
+  /*
+  * Style backgroumd image
+  */
+  .testimonial {
+    flex: 1 1 auto;
+
+    width: 100%;
+    max-width: 100%;
+
+    position: relative;
+
+    @include responsive(MD) {
+      max-width: 50%;
+    }
+  }
+
+  .testimonial__img {
+    width: 100%;
+    height: 400px;
+
+    order: 1;
+
+    @include responsive(MD) {
+      width: 50%;
+      height: 600px;
+
+      order: 2;
+    }
+
+    @include responsive(XL) {
+      height: 850px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    svg {
+      background: #696969;
+      fill: #a1a1a1;
+    }
+  }
+
+  /*
+  * Style header + btn
+  */
+  .section-subheading p {
+    @include responsive(LG) {
+      max-height: 240px;
+      overflow: hidden;
+    }
+  }
+
+  .section-header__title,
+  .section-subheading p,
+  .testimonial__btn {
+    @include responsive(LG) {
+      width: 380px;
+    }
+
+    @include responsive(XL) {
+      width: 467px;
+    }
+  }
+}

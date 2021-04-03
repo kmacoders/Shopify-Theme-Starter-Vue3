@@ -1,0 +1,20 @@
+.xo-shopify-section {
+  padding-top: $section-padding-top;
+  padding-bottom: $section-padding-bottom;
+
+  background-color: color(bg);
+}
+
+.xo-shopify-section--last {
+  padding-top: $section-padding-top;
+}
+
+.section-subheading {
+  h6 {
+    color: color(subheading-text);
+  }
+}
+
+.section-header__title {
+  text-transform: capitalize;
+}

@@ -1,0 +1,42 @@
+// Article Top
+.article-top__wrapper{
+  height: 500px;
+}
+
+.article-top__image {
+  height: 50%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include responsive(MD) {
+    height: 100%;
+  }
+}
+
+.article-top__content {
+  background-color: var(--color-theme-primary);
+
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include responsive(MD) {
+    height: 100%;
+    justify-content: space-around;
+  }
+
+  .article-top__desc {
+    flex: 1;
+  }
+
+  .article-top__title,
+  .article-top__desc,
+  .blog-article__date {
+    color: color(overlay-title-text);
+  }
+}

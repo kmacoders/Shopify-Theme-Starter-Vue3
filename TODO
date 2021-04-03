@@ -1,1 +1,25 @@
 - Add todo ở đây ....
+-- Sử dụng placeholder image:
+  - Sử dụng snippet có sẵn của Shopify:
+    + đặt điều kiện, nếu không có ảnh thì sử dụng placeholder:
+      VD: {% if block.settings.customer_cover == blank %}
+            <div class="swiper-slide__img">
+              {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          {% else %}
+              <img src="{{ block.settings.customer_cover | img_url: 'master' }}" alt="">
+            </div>
+          {% endif %}
+    + Đối với placeholder là ảnh background-image thì đặt 1 element div có class là 'placeholder-background'
+    chứa snippet placeholder và set position: relative cho thằng cần placeholder background
+      VD: <section class="contact-us__container">
+            {%- if section.settings.img_bg == blank -%}
+              <div class="placeholder-background">
+                {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+            {%- endif -%}
+          </section>
+
+          - Ở đây, khi background của 'contact-us__container' không có (== blank) thì sẽ thay bằng placeholder 'lifestyle-1'
+          của Shopify
+
+- Thêm translate cho toastifyjs

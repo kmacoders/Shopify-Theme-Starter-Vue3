@@ -10,16 +10,33 @@
     "allowJs": true,
     "module": "commonjs",
     "target": "es5",
+    "strictPropertyInitialization": false,
     "sourceMap": false,
     "moduleResolution": "node",
     "strict": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "types": ["google.maps"],
+
+    /* Config alias for ts */
+    "baseUrl": ".",
+    "paths": {
+      "Components/*": [ "./src/components/*" ],
+      "Helpers/*": [ "./src/helpers/*" ],
+      "Pages/*": [ "./src/pages/*" ],
+      "Sections/*": [ "./src/sections/*" ],
+      "Styles/*": [ "./src/styles/*" ],
+      "Theme/*": [ "./src/theme/*" ],
+      "Types/*": [ "./src/types/*" ],
+    }
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "**/*.spec.ts",
+    "**/*.test.ts"
   ],
   "include": [
     "./src/**/*.ts",
     "./src/**/*.vue",
+    "./jest.setup.ts"
   ],
 }

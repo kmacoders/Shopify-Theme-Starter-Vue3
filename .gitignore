@@ -7,4 +7,6 @@ npm-debug.log
 debug.log
 .env
 dist/config.yml
+dist/assets/app.js
+dist/assets/main.css
 .vscode

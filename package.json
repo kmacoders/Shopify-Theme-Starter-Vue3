@@ -1,28 +1,37 @@
 {
-  "name": "chroma-sg-theme",
+  "name": "xo-boutique",
   "version": "1.0.0",
-  "description": "- Create private app: `Read and write` `Theme templates and theme assets` permission - Add API Key to .env",
+  "description": "HungDz",
   "main": "webpack.common.js",
   "scripts": {
-    "dev": "webpack --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "dev": "npm run build -- --env.env=dev",
+    "build:prod": "npm run build -- --env.env=prod",
+    "build": "webpack",
+    "build:dev:bundleanalyzer": "npm run build -- --env.env=dev --env.addons=bundleanalyzer",
+    "build:prod:bundleanalyzer": "npm run build -- --env.env=prod --env.addons=bundleanalyzer",
+    "docs": "npx typedoc",
+    "test": "jest --detectOpenHandles"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/xopify1/base-theme.git"
+    "url": "git@gitlab.com:xopify-themes/xo-boutique.git"
   },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
+  "_moduleAliases": {
+    "@components": "dist",
+    "@helpers": "dist"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/xopify1/base-theme/issues"
+    "url": "https://gitlab.com/xopify-themes/xo-boutique/-/issues"
   },
-  "homepage": "https://gitlab.com/xopify1/base-theme#readme",
+  "homepage": "https://gitlab.com/xopify-themes/xo-boutique",
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
@@ -30,22 +39,36 @@
     "@babel/preset-env": "^7.5.5",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@shopify/theme-currency": "^4.1.1",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@types/google.maps": "^3.44.2",
+    "@types/googlemaps": "^3.43.3",
+    "@types/jest": "^26.0.20",
+    "@types/swiper": "^5.4.2",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
     "autoprefixer": "^9.7.1",
     "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.26.0",
+    "copy-webpack-plugin": "^6.2.1",
     "css-loader": "^3.2.0",
+    "css-minimizer-webpack-plugin": "^1.2.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-import": "^2.20.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.18.0",
-    "eslint-plugin-react-hooks": "^1.7.0",
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.22.1",
     "husky": "^4.3.8",
+    "jest": "^26.6.3",
+    "jsdoc": "^3.6.6",
     "mini-css-extract-plugin": "^0.9.0",
+    "module-alias": "^2.2.2",
     "node-sass": "^4.12.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
     "prettier": "^2.0.2",
+    "replace-in-file-webpack-plugin": "^1.0.6",
     "sass-loader": "^7.1.0",
     "style-loader": "^1.0.0",
     "stylelint": "^13.9.0",
@@ -53,20 +76,25 @@
     "stylelint-config-standard": "^20.0.0",
     "stylelint-webpack-plugin": "^2.1.1",
     "terser-webpack-plugin": "^2.2.1",
+    "ts-jest": "^26.5.0",
     "ts-loader": "^7.0.5",
-    "typescript": "^3.9.5",
+    "typedoc": "^0.20.32",
+    "typescript": "^3.9.7",
     "url-loader": "^2.1.0",
     "vue-loader": "^15.9.6",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.12",
     "webpack": "^4.38.0",
+    "webpack-bundle-analyzer": "^4.4.0",
     "webpack-cli": "^3.3.6",
+    "webpack-import-glob-loader": "^1.6.3",
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "@types/swiper": "^5.4.1",
-    "swiper": "^6.4.10",
+    "@shopify/theme-predictive-search": "^4.1.1",
+    "swiper": "^6.5.1",
     "vue": "^2.6.12",
-    "vue-class-component": "^7.2.6"
+    "vue-class-component": "^7.2.6",
+    "vue-property-decorator": "^9.1.2"
   }
 }

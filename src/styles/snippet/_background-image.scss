@@ -1,0 +1,49 @@
+/**
+ * ----------------------------------------------------------------------------
+ * CSS Snippet
+ * ----------------------------------------------------------------------------
+ */
+.hidden-tablet-and-up {
+  display: block;
+
+  @include responsive(MD) {
+    display: none ;
+  }
+}
+
+.hidden-phone {
+  display: none;
+
+  @include responsive(MD) {
+    display: block;
+  }
+}
+
+/**
+ * Image overlay
+ */
+ .image, .image--overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+}
+
+.image--overlay::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(to top, rgba(4, 4, 4, 0.65), rgba(54, 54, 54, 0.2));
+}

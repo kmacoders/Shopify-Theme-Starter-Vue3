@@ -1,1 +1,3 @@
-console.log('All helpers');
+import './vue/vueConfig';
+import './vue/globalFilter';
+import './swiper';
