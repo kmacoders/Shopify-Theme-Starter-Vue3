@@ -43,5 +43,35 @@ module.exports = {
      * Cho phép ngắt dòng ( string dom )
      */
     "operator-linebreak": "off",
+
+    /**
+     * For mutations VueX
+     *
+     * setCart(state, payload) {
+     * state.errorMessage = false;
+     * state.shoppingCart = payload;
+     * return state;
+  },
+     */
+    "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"] }],
+    "no-shadow": "off",
+    /**
+     * Ignore this vue lifecycle
+     */
+    "class-methods-use-this": [
+      "error",
+      { "exceptMethods": [
+        "beforeCreate",
+        "created",
+        "beforeMount",
+        "mounted",
+        "beforeUpdate",
+        "updated",
+        "beforeDestroy",
+        "destroyed"
+        ]
+      }
+    ],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
   },
 };

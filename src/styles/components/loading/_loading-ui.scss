@@ -1,0 +1,69 @@
+/* Base */
+.loading-ui {
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: placeHolderShimmer;
+  background: #f6f6f6;
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  background-size: 800px 104px;
+  height: 96px;
+  position: relative;
+
+  &.is-rectangle {
+    width: 150px;
+    @include responsive(MD) {
+      width: 200px;
+    }
+    height: 60px;
+    margin: 10px 0;
+  }
+
+  &.is-rounded {
+    border-radius: 15px;
+  }
+
+  &.is-title {
+    width: 200px;
+    @include responsive(MD) {
+      width: 250px;
+    }
+    height: 20px;
+    margin: 10px 0;
+  }
+
+  &.is-card {
+    height: 400px;
+  }
+}
+
+@keyframes placeHolderShimmer {
+  0%{ background-position: -468px 0; }
+  100%{ background-position: 468px 0; }
+}
+
+
+/* Custom on page */
+/* Alles */
+.loading-ui-wrapper__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loading-ui-wrapper__content {
+  .xo-row > * {
+    margin: 10px 0;
+  }
+
+  @media only screen and (max-width: 576px) {
+    .item:nth-child(odd) {
+      padding-right: calc(15px /2 );
+    }
+
+    .item:nth-child(even) {
+      padding-left: calc(15px /2 );
+    }
+  }
+}

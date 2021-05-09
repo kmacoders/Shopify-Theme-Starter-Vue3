@@ -3,7 +3,7 @@
  * CSS Snippet
  * ----------------------------------------------------------------------------
  */
-.hidden-tablet-and-up {
+.db-image-hidden-tablet-and-up {
   display: block;
 
   @include responsive(MD) {
@@ -11,7 +11,7 @@
   }
 }
 
-.hidden-phone {
+.db-image-hidden-phone {
   display: none;
 
   @include responsive(MD) {
@@ -22,7 +22,7 @@
 /**
  * Image overlay
  */
- .image, .image--overlay {
+ .db-image, .db-image--overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -38,7 +38,7 @@
   }
 }
 
-.image--overlay::after {
+.db-image--overlay::after {
   position: absolute;
   content: "";
   width: 100%;

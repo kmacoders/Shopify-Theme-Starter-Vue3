@@ -45,7 +45,8 @@ export interface ILineItem {
 }
 
 export interface IVariant {
-  id?: number;
+  price: number;
+  id: number;
   title?: string;
   option1?: string;
   option2?: any;
@@ -57,7 +58,6 @@ export interface IVariant {
   available?: boolean;
   name?: string;
   options?: string[];
-  price?: number;
   weight?: number;
   compare_at_price?: any;
   inventory_quantity?: number;

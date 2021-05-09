@@ -20,14 +20,13 @@
     /* Config alias for ts */
     "baseUrl": ".",
     "paths": {
+      "Shopify/*": [ "./shopify/*" ], // Shopify structure
       "Components/*": [ "./src/components/*" ],
       "Helpers/*": [ "./src/helpers/*" ],
-      "Pages/*": [ "./src/pages/*" ],
-      "Sections/*": [ "./src/sections/*" ],
       "Styles/*": [ "./src/styles/*" ],
-      "Theme/*": [ "./src/theme/*" ],
       "Types/*": [ "./src/types/*" ],
-    }
+      "Vue/*": [ "src/vue/*" ],
+    },
   },
   "exclude": [
     "node_modules",
@@ -37,6 +36,8 @@
   "include": [
     "./src/**/*.ts",
     "./src/**/*.vue",
+    "./shopify/**/*.ts",
+    "./shopify/**/*.vue",
     "./jest.setup.ts"
   ],
 }

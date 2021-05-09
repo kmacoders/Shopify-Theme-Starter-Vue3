@@ -1,0 +1,74 @@
+.account {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.account__header {
+  margin-bottom: 35px;
+  @include responsive(LG) { margin-bottom: 50px }
+
+  h3 {
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+}
+
+.account__content {
+  margin-bottom: 60px;
+  @include responsive(LG) { margin-bottom: 0 }
+}
+
+.account__info {
+  overflow: scroll;
+  width: 375px;
+  @include responsive(MD) {
+    width: 100%;
+    overflow: unset;
+  }
+}
+
+.account__table {
+  width: 100%;
+  border-collapse: separate;
+  white-space: nowrap;
+  overflow: scroll;
+  padding-right: 24px;
+
+  thead { line-height: 1.65 }
+
+  tr { border-collapse: separate }
+
+  th,td {
+    padding: 18px 10px;
+    border-bottom: 1px solid #e0e0e0;
+    @include responsive(LG) { padding-left: 0 }
+  }
+
+  th {
+    text-align: left;
+    @include responsive(LG) { padding-top: 0 }
+  }
+}
+
+.account__address {
+  .account__address-header {
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 1.65;
+  }
+}
+
+.account__address-content{
+  span {
+    line-height: 1.65;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  .account__address-link { margin-top: 32px }
+}

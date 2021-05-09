@@ -4,6 +4,7 @@ export interface IProduct {
   id: number;
   title: string;
   handle: string;
+  variants: IVariant[];
   description?: string;
   published_at: Date;
   created_at: Date;
@@ -19,7 +20,6 @@ export interface IProduct {
   compare_at_price_min?: number;
   compare_at_price_max?: number;
   compare_at_price_varies?: boolean;
-  variants?: IVariant[];
   images?: string[];
   featured_image?: string;
   options?: IOption[];

@@ -1,4 +1,4 @@
-import { ICart, IItemsResponse, IProperty } from '../../types/shopify/cart.type';
+import { ICart, IItemsResponse, IProperty } from 'Types/shopify/cart.type';
 
 /**
  * Get current json state of cart object
@@ -43,13 +43,21 @@ const getCartState = async (): Promise<ICart> => {
   * @param {onSuccess} onSuccess - Callback on success
   * @param {onError} onError - Callback on fail
   */
-const addItem = (
+const addItem = async (config: {
   id: string | number,
   quantity?: number,
   properties?: IProperty,
   onSuccess?: (cartState: ICart, res: IItemsResponse) => void,
   onError?: (err: Error) => void,
-): void => {
+}): Promise<void> => {
+  const {
+    id,
+    quantity,
+    properties,
+    onSuccess,
+    onError,
+  } = config;
+
   const formData = {
     items: [{
       id,
@@ -58,26 +66,22 @@ const addItem = (
     }],
   };
 
-  fetch('/cart/add.js', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(formData),
-  })
-    .then(async (response) => {
-      // Stop get cart state if you dont't want =))
-      if (onSuccess) {
-        const cart = await getCartState();
-        const res = await response.json();
-        onSuccess(cart, res);
-      }
-    })
-    .catch((error) => {
-      if (onError) {
-        onError(error);
-      }
+  try {
+    const res = await fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
     });
+
+    if (!res.ok) throw new Error('Bad response from server');
+    const cart = await getCartState();
+    const result = await res.json();
+    onSuccess && onSuccess(cart, result);
+  } catch (error) {
+    onError && onError(error);
+  }
 };
 
 /**
@@ -103,37 +107,42 @@ const addItem = (
  * @param {onSuccess} onSuccess - Callback on success
  * @param {onError} onError - Callback on fail
  */
-const updateItemByKey = (
+const updateItemByKey = async (config: {
   key: string,
   quantity?: number,
   properties?: IProperty,
   onSuccess?: (cartState: ICart) => void,
   onError?: (err: Error) => void,
-): void => {
+}): Promise<void> => {
+  const {
+    key,
+    quantity,
+    properties,
+    onSuccess,
+    onError,
+  } = config;
+
   const formData = {
     id: key,
     quantity,
     properties,
   };
 
-  fetch('/cart/change.js', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(formData),
-  })
-    .then(async (cartState) => {
-      if (onSuccess) {
-        const cart = await cartState.json();
-        onSuccess(cart);
-      }
-    })
-    .catch((error) => {
-      if (onError) {
-        onError(error);
-      }
+  try {
+    const res = await fetch('/cart/change.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
     });
+
+    if (!res.ok) throw new Error('Bad response from server');
+    const cart = await res.json();
+    onSuccess && onSuccess(cart);
+  } catch (error) {
+    onError && onError(error);
+  }
 };
 
 /**
@@ -162,37 +171,41 @@ const updateItemByKey = (
  * @param {onSuccess} onSuccess - Callback on success
  * @param {onError} onError - Callback on fail
  */
-const updateItemByLine = (
+const updateItemByLine = async (config: {
   line: number,
   quantity?: number,
   properties?: IProperty,
   onSuccess?: (cartState: ICart) => void,
   onError?: (err: Error) => void,
-): void => {
+}): Promise<void> => {
+  const {
+    line,
+    quantity,
+    properties,
+    onSuccess,
+    onError,
+  } = config;
+
   const formData = {
     line,
     quantity,
     properties,
   };
 
-  fetch('/cart/change.js', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(formData),
-  })
-    .then(async (cartState) => {
-      if (onSuccess) {
-        const cart = await cartState.json();
-        onSuccess(cart);
-      }
-    })
-    .catch((error) => {
-      if (onError) {
-        onError(error);
-      }
+  try {
+    const res = await fetch('/cart/change.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
     });
+    if (!res.ok) throw new Error('Bad response from server');
+    const cart = await res.json();
+    onSuccess && onSuccess(cart);
+  } catch (error) {
+    onError && onError(error);
+  }
 };
 
 /**
@@ -213,27 +226,28 @@ const updateItemByLine = (
  * @param {onSuccess} onSuccess - Callback on success
  * @param {onError} onError - Callback on fail
  */
-const clearCart = (
+const clearCart = async (config: {
   onSuccess?: (cartState: ICart) => void,
   onError?: (err: Error) => void,
-): void => {
-  fetch('/cart/clear.js', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-    .then(async (emptyCart) => {
-      if (onSuccess) {
-        const cartState = await emptyCart.json();
-        onSuccess(cartState);
-      }
-    })
-    .catch((error) => {
-      if (onError) {
-        onError(error);
-      }
+}): Promise<void> => {
+  const {
+    onSuccess,
+    onError,
+  } = config;
+
+  try {
+    const res = await fetch('/cart/clear.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
     });
+    if (!res.ok) throw new Error('Bad response from server');
+    const cartState = await res.json();
+    onSuccess && onSuccess(cartState);
+  } catch (error) {
+    onError && onError(error);
+  }
 };
 
 export {

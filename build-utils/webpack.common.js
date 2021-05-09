@@ -103,11 +103,10 @@ const hugCommonConfig = {
       vue: 'vue/dist/vue.esm.js',
       Components: commonPath.componentsPath,
       Helpers: commonPath.helpersPath,
-      Pages: commonPath.pagesPath,
-      Sections: commonPath.sectionsPath,
       Styles: commonPath.stylesPath,
-      Theme: commonPath.themeDevPath,
+      Shopify: commonPath.themeDevPath,
       Types: commonPath.typesPath,
+      Vue: commonPath.vuePath,
      }
   },
   stats: {

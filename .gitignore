@@ -6,6 +6,7 @@ thumb.db
 npm-debug.log
 debug.log
 .env
+dist/
 dist/config.yml
 dist/assets/app.js
 dist/assets/main.css

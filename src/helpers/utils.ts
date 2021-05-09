@@ -1,23 +1,30 @@
 import * as Cart from './cart/cart';
 import { qs } from './dom/dom';
 
-/**
- * Update lại số item có trên cart icon trên thanh menu top
- */
-const updateCartItemCount = ():void => {
-  Cart.getCartState().then((cartState) => {
-    const itemCount = Number(cartState.item_count);
-    const cartItemCountEl = qs('.xo-header__cart-count') as HTMLElement;
+const updateHeightWrapperSlide = (): void => {
+  const slideWrapper = qs('.product-slide__wrapper') as HTMLElement;
+  const productContainer = qs('.product-container') as HTMLElement;
 
-    cartItemCountEl.innerHTML = String(cartState.item_count);
-    if (itemCount > 0) {
-      cartItemCountEl.classList.remove('xo-header__cart-count--is-empty');
-    } else {
-      cartItemCountEl.classList.add('xo-header__cart-count--is-empty');
-    }
+  const screenWidth = window.innerWidth
+      || document.documentElement.clientWidth
+      || document.body.clientWidth;
+  if (screenWidth >= 768) {
+    slideWrapper.style.height = `${productContainer?.clientHeight - 70}px`;
+  } else {
+    slideWrapper.style.height = 'initial';
+  }
+};
+
+const handleHeightWrapperSlide = (): void => {
+  updateHeightWrapperSlide();
+  window.addEventListener('resize', (): void => {
+    updateHeightWrapperSlide();
   });
 };
 
+const updateTime = (): string => new Date().getTime().toString();
+
 export {
-  updateCartItemCount
+  updateTime,
+  handleHeightWrapperSlide,
 };

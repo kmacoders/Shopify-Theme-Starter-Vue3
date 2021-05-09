@@ -3,7 +3,6 @@
 /*
  * Vendor
  */
-// @import '~swiper/swiper.scss';
 @import './vendors/reset';
 @import './vendors/variants'; // File chứa variable cho file grid bên dứoi
 @import './vendors/grid'; // Grid BS4
@@ -30,14 +29,14 @@
 @import './components/components-dir';
 
 /*
+ * Snippet
+ */
+ @import './snippet/background-image';
+
+/*
  * Sections
  */
  @import './sections/sections-dir';
-
-/*
- * Snippet
- */
- @import './snippet/snippet-dir';
 
 /*
  * Base
@@ -51,13 +50,10 @@
 
 /* Auto impo@import all scss file from Theme folder  */
 /* Using @see https://www.npmjs.com/package/impo@import-glob-loader */
-@import "../theme/**/*.scss";
+@import "../../shopify/**/*.scss";
 
 /*
  * Code chung
  */
 @import './general';
-
-* {
-  color: red;
-}
+@import './vueGeneral';

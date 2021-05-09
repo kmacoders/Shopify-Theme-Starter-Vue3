@@ -9,11 +9,11 @@ module.exports = {
        * Các folder có json, không lấy folder con
        */
       {
-        from: path.resolve(__dirname, commonPath.srcPath, 'theme/config/*.json'),
+        from: path.resolve(__dirname, commonPath.themeDevPath, 'config/*.json'),
         to: path.resolve(__dirname, commonPath.outputPath, 'config/[name].[ext]'),
       },
       {
-        from: path.resolve(__dirname, commonPath.srcPath, 'theme/locales/*.json'),
+        from: path.resolve(__dirname, commonPath.themeDevPath, 'locales/*.json'),
         to: path.resolve(__dirname, commonPath.outputPath, 'locales/[name].[ext]'),
       },
       /**
@@ -21,26 +21,26 @@ module.exports = {
        */
       {
 
-        from: path.resolve(__dirname, commonPath.srcPath, 'theme/layout/**/*.liquid'),
+        from: path.resolve(__dirname, commonPath.themeDevPath, 'layout/**/*.liquid'),
         to: path.resolve(__dirname, commonPath.outputPath, 'layout/[name].[ext]'),
       },
       {
-        from: path.resolve(__dirname, commonPath.srcPath, 'theme/sections/**/*.liquid'),
+        from: path.resolve(__dirname, commonPath.themeDevPath, 'sections/**/*.liquid'),
         to: path.resolve(__dirname, commonPath.outputPath, 'sections/[name].[ext]'),
       },
       {
-        from: path.resolve(__dirname, commonPath.srcPath, 'theme/snippets/**/*.liquid'),
+        from: path.resolve(__dirname, commonPath.themeDevPath, 'snippets/**/*.liquid'),
         to: path.resolve(__dirname, commonPath.outputPath, 'snippets/[name].[ext]'),
       },
       /**
        * Folder này cứ để nguyên xi
        */
       {
-        from: path.resolve(__dirname, commonPath.srcPath, 'theme/templates'),
+        from: path.resolve(__dirname, commonPath.themeDevPath, 'templates'),
         to: path.resolve(__dirname, commonPath.outputPath, 'templates'),
       },
       {
-        from: path.resolve(__dirname, commonPath.srcPath, 'theme/assets'),
+        from: path.resolve(__dirname, commonPath.themeDevPath, 'assets'),
         to: path.resolve(__dirname, commonPath.outputPath, 'assets'),
       }
       // ,
@@ -48,15 +48,15 @@ module.exports = {
       //  * SCSS in section ( inside ./theme folder )
       //  */
       // {
-      //   from: path.resolve(__dirname, commonPath.srcPath, 'theme/**/*.scss'),
-      //   to: path.resolve(__dirname, commonPath.srcPath, 'sections/scss/[name].[ext]'),
+      //   from: path.resolve(__dirname, commonPath.themeDevPath, '**/*.scss'),
+      //   to: path.resolve(__dirname, commonPath.themeDevPath, 'sections/scss/[name].[ext]'),
       // },
       // /**
       //  * TS in section ( inside ./theme folder )
       //  */
       // {
-      //   from: path.resolve(__dirname, commonPath.srcPath, 'theme/**/*.ts'),
-      //   to: path.resolve(__dirname, commonPath.srcPath, 'sections/ts/[name].[ext]'),
+      //   from: path.resolve(__dirname, commonPath.themeDevPath, '**/*.ts'),
+      //   to: path.resolve(__dirname, commonPath.themeDevPath, 'sections/ts/[name].[ext]'),
       // }
     ],
   }),

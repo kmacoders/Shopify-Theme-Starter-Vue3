@@ -1,15 +1,6 @@
-@import './blog/blog';
-@import './blog/blog-detail';
-@import './blog/blog-posts';
+@import './body';
+@import './customer/account';
 
-@import './product/product-general';
-@import './product/swiper-custom-product';
-
-@import './cart/cart';
-@import './error/error';
-@import './search';
-
-@import './customer/general';
-@import './customer/login';
-@import './customer/register';
-@import './customer/reset-password';
+@import './collection/all-collection';
+@import './collection/page-alles';
+@import './collection/normal-collection';
