@@ -1,3 +1,6 @@
+/**
+ * All store
+ */
 // import Vue from 'vue';
 // import Vuex from 'vuex';
 // import CartStore from './modules/cart';

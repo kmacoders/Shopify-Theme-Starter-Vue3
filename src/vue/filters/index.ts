@@ -1,3 +1,6 @@
+/**
+ * Import Vue Filter global
+ */
 import Vue from 'vue';
 import hugMonedyFormat from './hugMoneyFormat';
 import imgURL from './imgURL';
