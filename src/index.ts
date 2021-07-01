@@ -27,7 +27,7 @@ tsFiles.keys().forEach(tsFiles);
  * vue components
  * auto-import all vue components
  */
-const vueComponents = require.context('./vue/components/', true, /\.vue$/);
+const vueComponents = require.context('./vue/components/globals/', true, /\.vue$/);
 vueComponents.keys().forEach((key) => {
   const component = vueComponents(key).default;
   Vue.component(component.name, component);
@@ -41,14 +41,14 @@ vueComponents.keys().forEach((key) => {
  *
  * {% schema %}
  * {
- *   "class": "shopify-section-vue"
+ *   "class": "vue-section"
  * }
  * {% endschema %}
  */
 
 /* If merchant in designMode */
 Shopify.designMode && document.addEventListener('shopify:section:load', (event) => {
-  if (event.target.classList.value.includes('vue')) {
+  if (event.target.classList.value.includes('vue-section')) {
     const newInstanceVue = new Vue({
       el: event.target,
       store,
@@ -56,22 +56,22 @@ Shopify.designMode && document.addEventListener('shopify:section:load', (event) 
   }
 });
 
-// /* If merchant in normalMode ( is Section ) */
-// document.querySelectorAll('.shopify-section').forEach((section) => {
-//   if (section.classList.value.includes('vue')) {
-//     const newInstanceVue = new Vue({
-//       el: section,
-//       vuexStore,
-//     });
-//   }
-// });
+/* If merchant in normalMode ( is Section ) */
+document.querySelectorAll('.shopify-section').forEach((section) => {
+  if (section.classList.value.includes('vue-section')) {
+    const newInstanceVue = new Vue({
+      el: section,
+      store,
+    });
+  }
+});
 
-// /** If vue instace != section */
-// document.querySelectorAll('[data-vue-instance]').forEach((section) => {
-//   const newInstanceVue = new Vue({
-//     el: section,
-//     vuexStore,
-//   });
-// });
+/** If vue instace != section */
+document.querySelectorAll('[data-vue-instance]').forEach((element) => {
+  const newInstanceVue = new Vue({
+    el: element,
+    store,
+  });
+});
 
 console.log('kmacoders developing..');
