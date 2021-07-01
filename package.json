@@ -10,7 +10,10 @@
     "build:dev:bundleanalyzer": "npm run build -- --env.env=dev --env.addons=bundleanalyzer",
     "build:prod:bundleanalyzer": "npm run build -- --env.env=prod --env.addons=bundleanalyzer",
     "docs": "npx typedoc",
-    "test": "jest --detectOpenHandles"
+    "test": "jest --detectOpenHandles",
+    "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
+    "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
+    "lint": "npm run lint:js && npm run lint:style"
   },
   "repository": {
     "type": "git",
@@ -61,6 +64,7 @@
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-vue": "^7.12.1",
     "husky": "^4.3.8",
     "jest": "^26.6.3",
     "jsdoc": "^3.6.6",

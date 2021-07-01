@@ -10,6 +10,7 @@ module.exports = {
     "airbnb-typescript/base",
     "plugin:@typescript-eslint/recommended",
     "plugin:eslint-comments/recommended",
+    'plugin:vue/vue3-recommended'
   ],
   parserOptions: {
     project: './tsconfig.json',
