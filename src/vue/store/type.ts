@@ -1,4 +1,4 @@
-export interface RootState {
-  cartCount: number,
-  isOpen: boolean,
-}
+// export interface RootState {
+//   cartCount: number,
+//   isOpen: boolean,
+// }
