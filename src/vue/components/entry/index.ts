@@ -1,3 +1,8 @@
+/**
+ * Import all entry
+ * Mount Vue SFC vào DOM
+ */
+
 // import { onSectionSelected } from 'Helpers/sections';
 // import SearchBar from './search/SearchBar.vue';
 // import PageAlles from './alles/PageAlles.vue';
