@@ -1,14 +1,20 @@
 <template>
   <button class="xo-btn">
-    Global atomic button
+    {{ title }}
   </button>
 </template>
-<script lang="ts">
-import { Vue, Component } from 'vue-property-decorator'
 
-@Component
-export default class XoButton extends Vue {
+<script>
+import { ref } from 'vue'
+export default {
+  name: 'xo-button',
+  setup() {
+    const title = ref('Global atomic button')
 
+    return {
+      title
+    }
+  }
 }
 </script>
 

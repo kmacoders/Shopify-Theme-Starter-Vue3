@@ -39,7 +39,6 @@
             {%- when 'button' -%}
               {%- if block.settings.button_label != blank -%}
                 <a href="{{ block.settings.button_link }}" class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"{% if block.settings.button_link == blank %} aria-disabled="true"{% endif %} {{ block.shopify_attributes }}>
-                  {{ block.settings.button_label | escape }}
                 </a>
                 <xo-button />
               {%- endif -%}

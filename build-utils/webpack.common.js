@@ -3,7 +3,7 @@ const commonPath = require('./common-path');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const { VueLoaderPlugin } = require('vue-loader')
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const copyPlugin = require('./common-plugins/copy-plugin');
 const replacePlugin = require('./common-plugins/replace-in-file-plugin');
@@ -100,7 +100,7 @@ const hugCommonConfig = {
   resolve: {
     extensions: ['.vue', '.ts', '.js', '.json'],
     alias: {
-      vue: 'vue/dist/vue.esm.js',
+      vue: 'vue/dist/vue.esm-bundler.js',
       Components: commonPath.componentsPath,
       Helpers: commonPath.helpersPath,
       Styles: commonPath.stylesPath,

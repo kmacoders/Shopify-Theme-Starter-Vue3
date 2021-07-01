@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-import Vue from 'vue';
+import Vue, { createApp } from 'vue';
 import 'Vue/config';
 import 'Vue/filters';
 import store from './vue/store';
@@ -28,10 +28,10 @@ tsFiles.keys().forEach(tsFiles);
  * auto-import all vue components
  */
 const vueComponents = require.context('./vue/components/globals/', true, /\.vue$/);
-vueComponents.keys().forEach((key) => {
-  const component = vueComponents(key).default;
-  Vue.component(component.name, component);
-});
+// vueComponents.keys().forEach((key) => {
+//   const component = vueComponents(key).default;
+//   Vue.component(component.name, component);
+// });
 
 /**
  * All SECTION is vue instance ( template vue )
@@ -49,28 +49,46 @@ vueComponents.keys().forEach((key) => {
 /* If merchant in designMode */
 Shopify.designMode && document.addEventListener('shopify:section:load', (event) => {
   if (event.target.classList.value.includes('vue-section')) {
-    const newInstanceVue = new Vue({
-      el: event.target,
+    const app = createApp({
+      delimiters: ['${', '}'],
       store,
     });
+
+    vueComponents.keys().forEach((key) => {
+      const component = vueComponents(key).default;
+      app.component(component.name, component);
+    });
+
+    app.mount(event.target);
   }
 });
 
 /* If merchant in normalMode ( is Section ) */
 document.querySelectorAll('.shopify-section').forEach((section) => {
   if (section.classList.value.includes('vue-section')) {
-    const newInstanceVue = new Vue({
-      el: section,
+    const app = createApp({
+      delimiters: ['${', '}'],
       store,
     });
+
+    vueComponents.keys().forEach((key) => {
+      const component = vueComponents(key).default;
+      app.component(component.name, component);
+    });
+
+    app.mount(section);
   }
 });
 
 /** If vue instace != section */
 document.querySelectorAll('[data-vue-instance]').forEach((element) => {
-  const newInstanceVue = new Vue({
+  const newInstanceVue = createApp({
     el: element,
     store,
+  });
+  vueComponents.keys().forEach((key) => {
+    const component = vueComponents(key).default;
+    newInstanceVue.component(component.name, component);
   });
 });
 
