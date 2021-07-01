@@ -16,7 +16,6 @@ import './styles/main.scss';
  */
 import './helpers';
 import './vue/components/entry';
-import './helpers/lazyload';
 
 /**
  * Auto find and import all .ts file in Shopify folder
