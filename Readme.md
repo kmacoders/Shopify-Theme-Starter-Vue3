@@ -32,6 +32,7 @@
 - Build in Cart API
 - Build in Typing Shopify, Product, Cart, Collection...
 - Build in Filter Vue for Shopify ( Format Money, imgURL ... )
+- Build in Dom query
 -  ...
 
 
