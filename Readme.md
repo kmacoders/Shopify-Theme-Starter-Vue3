@@ -1,14 +1,14 @@
 ## Feature 
-- Stater build dựa trên theme Shopify 2.0 mới [Dawn](https://github.com/Shopify/dawn)
+-  Starter follow by theme [Dawn] ( 2.0 OS )(https://github.com/Shopify/dawn)
 - Vue 3 + Typescript + Liquid ( Class base with [Vue Class Component](https://class-component.vuejs.org/) + [Vue Propery Decorators](https://github.com/kaorun343/vue-property-decorator)
 - VueX store ( Class base with [Vuex Module Decorators](https://championswimmer.in/vuex-module-decorators/pages/overview.html) )
 - SCSS
 - ESLint + StyleLint
-- Husky + Commit Lint ( check convention bên dưới )
+- Husky + Commit Lint ( Convention below )
 - Jest
-- Tạo docs với `npm run docs`
-- Deep folder với ./shopify
-- Tạo separate section | snipets
+- Docs with `npm run docs`
+- Deep folder with ./shopify
+- Separate section | snipets
 ```
 .
 ├── src
@@ -37,7 +37,7 @@
 
 
 ## How to code
-- Tạo private app, đặt config file vào `./dist` folder
+- Create private app, move config file to `./dist` folder
 - Spit terminal
 ```
 # Terminal 1
@@ -103,7 +103,7 @@ git commit -m "fix: fix textfield" # passes
 ```
 ## SCSS
 ### Import
- - File main chỉ để import
+ - Main file only import
  - Trong các folder nhỏ, import scss vào `*-dir.scss` folder, rồi chỉ import file `*-dir.scss` ra ngoài `main`
 
 `_utils.scss`
@@ -120,17 +120,6 @@ git commit -m "fix: fix textfield" # passes
 * Utils
 */
 @import  './utils/utils-dir';
-```
-
-### Bootstrap 4 Grid
-Grid của BS4 đã được thêm sẵn trong `./style/vendors`, chỉ cần lấy ra dùng, thêm prefix `xo-` trước class là được.
-
-```
-<div class="xo-container">
-  <div class="xo-row">
-    ...
-  </div>
-</div>
 ```
 
 #### Reset CSS
